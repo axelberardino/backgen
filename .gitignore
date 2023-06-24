@@ -12,3 +12,11 @@ Cargo.lock
 
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
+
+# Some images and binaries we don't want
+*.svg
+*.png
+*.txt
+*.jpg
+*.xcf
+*.pdf

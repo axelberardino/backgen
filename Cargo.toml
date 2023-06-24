@@ -1,0 +1,24 @@
+[package]
+name = "backgen"
+version = "1.0.0"
+authors = ["axel berardino <axel.berardino@gmail.com>"]
+edition = "2018"
+description = "Create random background from an id"
+repository = "https://github.com/axelberardino/backgen"
+
+[[bin]]
+name = "backgen"
+path = "cmd/cli/main.rs"
+
+[dependencies]
+blurhash = "0.1"
+chrono = "0.4"
+clap = { version = "4.0", features = ["derive"] }
+delaunator = "1.0"
+image = "0.24"
+rand = "0.7.*"
+resvg = "0.11"
+serde = "1.0.*"
+serde_derive = "1.0.*"
+toml = "0.7"
+usvg = "0.11"
