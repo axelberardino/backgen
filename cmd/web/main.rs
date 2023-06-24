@@ -136,11 +136,11 @@ const GEN_PAGE_TEMPLATE: &str = r#"
     <p>BlurHash is: {{ blurhash }}</p>
     <p>
         <h2>Generated Image<h2>
-        <img src="/{{ gen_dest }}" />
+        <img src="/{{ gen_dest }}" height="300" />
     </p>
     <p>
         <h2>Blurhash Image<h2>
-        <img src="/{{ blur_dest }}" />
+        <img src="/{{ blur_dest }}" height="300" />
     </p>
 </body>
 </html>

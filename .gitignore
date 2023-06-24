@@ -20,3 +20,8 @@ Cargo.lock
 *.jpg
 *.xcf
 *.pdf
+
+# Allow
+!static/docs/345.png
+!static/docs/42.png
+!static/docs/15k.png
