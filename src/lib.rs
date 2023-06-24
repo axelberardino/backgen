@@ -3,6 +3,7 @@ pub mod chooser;
 pub mod color;
 pub mod deserializer;
 pub mod frame;
+pub mod gen_image;
 pub mod log;
 pub mod paint;
 pub mod pos;

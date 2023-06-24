@@ -2,7 +2,7 @@
 name = "backgen"
 version = "1.0.0"
 authors = ["axel berardino <axel.berardino@gmail.com>"]
-edition = "2018"
+edition = "2021"
 description = "Create random background from an id"
 repository = "https://github.com/axelberardino/backgen"
 
@@ -10,7 +10,12 @@ repository = "https://github.com/axelberardino/backgen"
 name = "backgen"
 path = "cmd/cli/main.rs"
 
+[[bin]]
+name = "backgen-web"
+path = "cmd/web/main.rs"
+
 [dependencies]
+axum = "0.6"
 blurhash = "0.1"
 chrono = "0.4"
 clap = { version = "4.0", features = ["derive"] }
@@ -18,8 +23,14 @@ delaunator = "1.0"
 image = "0.24"
 rand = "0.7.*"
 resvg = "0.11"
-serde = "1.0.*"
+serde = { version = "1.0", features = ["derive"] }
 serde_derive = "1.0.*"
-toml = "0.7"
-usvg = "0.11"
 thiserror = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+toml = "0.7"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+usvg = "0.11"
+tower = { version = "0.4", features = ["util"] }
+tower-http = { version = "0.4.0", features = ["fs", "trace"] }
+minijinja = {version = "1.0", features = ["builtins"]}
